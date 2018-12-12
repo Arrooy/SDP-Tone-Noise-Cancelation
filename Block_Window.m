@@ -4,8 +4,8 @@ function Sk = Block_Window (fileName, frameDuration)
     frameDuration = 10;
   end
   [audioData, fm] = audioread(fileName);
-  audioDuration = (length(audioData(:,1)) * 1000) / fm;
+  audioDuration = (length(audioData(:, 1)) * 1000) / fm;
   nFrames = round(audioDuration / frameDuration);
-  audioMat = vec2mat(audioData(:,1), nFrames);
+  audioMat = vec2mat(audioData(:, 1), nFrames);
   Sk = audioMat;
 endfunction
